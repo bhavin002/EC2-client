@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await fetch('http://localhost:5050');
+      const response = await fetch(process.env.REACT_APP_URL);
       const data = await response.json();
       setData(data);
     }
